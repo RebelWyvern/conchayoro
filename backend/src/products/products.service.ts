@@ -44,4 +44,9 @@ Promise<Product> {
     await product.update(productUpdated);
     return product
   }
+  async findByCriteria(criteria: any): Promise<Product[]> {
+return this.productModel.findAll({
+where: criteria,
+});
+}
 }
